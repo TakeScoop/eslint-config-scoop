@@ -69,7 +69,11 @@ module.exports = {
         "no-lonely-if": 2,
         "no-multi-spaces": 2,
         "no-multi-str": 2,
+        "no-param-reassign": 2,
+        "no-path-concat": 2,
+        "no-process-env": 2,
         "no-new-object": 2,
+        "no-new-require": 2,
         "no-restricted-globals": [
             2,
             "Promise"
