@@ -70,6 +70,10 @@ module.exports = {
         "no-multi-spaces": 2,
         "no-multi-str": 2,
         "no-new-object": 2,
+        "no-restricted-globals": [
+            2,
+            "Promise"
+        ],
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
         "no-unused-vars": [
