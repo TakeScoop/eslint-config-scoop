@@ -1,0 +1,21 @@
+{
+  "name": "@scoop/eslint-config-scoop",
+  "version": "0.1.0",
+  "description": "Scoop's custom eslint configuration",
+  "main": "index.js",
+  "scripts": {
+    "//": "This ensures we're not using any old rules, mostly, when upgrading eslint devDependency",
+    "test": "eslint -c index.js ."
+  },
+  "author": "Scoop Technologies Inc",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.7.0"
+  },
+  "peerDependencies": {
+    "eslint": "^2.7.0",
+  },
+  "dependencies": {
+    "eslint-plugin-require-path-exists": "^1.1.5"
+  }
+}
