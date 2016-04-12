@@ -1,6 +1,6 @@
 {
   "name": "@scoop/eslint-config-scoop",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Scoop's custom eslint configuration",
   "main": "index.js",
   "scripts": {
