@@ -77,6 +77,10 @@ module.exports = {
             2,
             "Promise"
         ],
+        "no-return-assign": [
+            2,
+            "always"
+        ],
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
         "no-unused-vars": [
