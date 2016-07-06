@@ -3,8 +3,7 @@
 To use:
 
 ```sh  
-npm install --save-dev eslint
-npm install --save-dev @scoop/eslint-config-scoop
+npm install --save-dev eslint@2 eslint-plugin-require-path-exists @scoop/eslint-config-scoop
 ```
 
 Then, add an `.eslintrc.json` file with the following:
