@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "//": "This ensures we're not using any old rules, mostly, when upgrading eslint devDependency",
-    "test": "eslint -c index.js ."
+    "test": "test/run"
   },
   "author": "Scoop Technologies Inc",
   "license": "MIT",
