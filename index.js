@@ -44,6 +44,7 @@ module.exports = {
             2,
             4,
             {
+                "MemberExpression": 0,
                 "SwitchCase": 1
             }
         ],
