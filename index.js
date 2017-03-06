@@ -24,6 +24,13 @@ module.exports = {
             2,
             "only-multiline"
         ],
+        "comma-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
         "comma-style": [
             2,
             "last"
