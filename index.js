@@ -132,6 +132,12 @@ module.exports = {
             2,
             "global"
         ],
+        "valid-typeof": [
+            2,
+            {
+                "requireStringLiterals": true
+            }
+        ],
         "vars-on-top": 2
     }
 }
