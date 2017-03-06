@@ -5,6 +5,10 @@ found_error=false
 # lint the actual library
 echo 'Linting the library'
 $(npm bin)/eslint -c index.js index.js
+if [ $? != "0" ]; then
+  echo "Something wrong with index.js"
+  exit 1
+fi
 echo -e 'Passed\n'
 
 # lint the pass cases
