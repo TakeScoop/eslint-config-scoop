@@ -146,6 +146,10 @@ module.exports = {
                 "requireStringLiterals": true
             }
         ],
-        "vars-on-top": 2
+        "vars-on-top": 2,
+        "wrap-iife": [
+            2,
+            "inside"
+        ]
     }
 }
