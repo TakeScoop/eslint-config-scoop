@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 
-const cased = require('./complexCaseFile')
+const cased = require('../complexCaseFile')
 
 function main() {
     const s = fs.constants

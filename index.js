@@ -51,6 +51,7 @@ module.exports = {
             2,
             4,
             {
+                "MemberExpression": 0,
                 "SwitchCase": 1
             }
         ],
@@ -138,6 +139,12 @@ module.exports = {
         "strict": [
             2,
             "global"
+        ],
+        "valid-typeof": [
+            2,
+            {
+                "requireStringLiterals": true
+            }
         ],
         "vars-on-top": 2
     }
