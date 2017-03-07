@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -e
+
+# lint the actual library
+echo 'Linting the library'
+$(npm bin)/eslint -c index.js index.js
+echo -e 'Passed\n'
+
+echo 'Linting the pass fixture'
+$(npm bin)/eslint -c index.js test/fixtures/pass.js
+echo -e 'Passed\n'
+
+echo 'Linting the fail fixture (passes if eslint failed)'
+if ! $(npm bin)/eslint -c index.js test/fixtures/fail.js; then
+    echo 'found an error, yippeee'
+else
+    echo 'ERROR: Did not find an error in the fail fixture, exiting!'
+    exit 1
+fi
+
+echo -e 'Passed\n'

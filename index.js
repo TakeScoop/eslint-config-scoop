@@ -8,12 +8,13 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "plugins": [
-        "require-path-exists"
+        "dependencies"
     ],
     "rules": {
-        "require-path-exists/exists": 2,
-        "require-path-exists/notEmpty": 2,
-        "require-path-exists/tooManyArguments": 2,
+        "dependencies/case-sensitive": 2,
+        "dependencies/no-cycles": 2,
+        "dependencies/no-unresolved": 2,
+        "dependencies/require-json-ext": 2,
         "block-scoped-var": 2,
         "brace-style": [
             2,
