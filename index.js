@@ -103,6 +103,7 @@ module.exports = {
             2,
             "nofunc"
         ],
+        "no-useless-return": 2,
         "object-curly-spacing": [
             2,
             "always",
