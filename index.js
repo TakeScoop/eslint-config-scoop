@@ -120,6 +120,7 @@ module.exports = {
             "single",
             "avoid-escape"
         ],
+        "radix": 2,
         "semi": [
             2,
             "never"
