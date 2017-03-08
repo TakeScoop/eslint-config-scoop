@@ -78,6 +78,7 @@ module.exports = {
             2,
             "functions"
         ],
+        "no-implicit-globals": 2,
         "no-lonely-if": 2,
         "no-multi-spaces": 2,
         "no-multi-str": 2,
@@ -120,7 +121,6 @@ module.exports = {
             "single",
             "avoid-escape"
         ],
-        "radix": 2,
         "semi": [
             2,
             "never"
