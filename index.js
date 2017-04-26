@@ -92,6 +92,7 @@ module.exports = {
         ],
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
+        "no-unsafe-negation": 2,
         "no-unused-vars": [
             2,
             {
