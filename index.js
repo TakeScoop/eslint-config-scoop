@@ -87,6 +87,13 @@ module.exports = {
             2,
             "Promise"
         ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "CallExpression[callee.name!='parseInt'] > Identifier[name='parseInt']",
+                "message": "Call parseInt directly to guarantee radix param is not incorrectly provided"
+            }
+        ],
         "no-return-assign": [
             2,
             "always"
