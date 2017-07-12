@@ -1,4 +1,5 @@
 .gitignore
 .git
+circle.yml
 node_modules/
 test/
