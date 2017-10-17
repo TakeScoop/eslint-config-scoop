@@ -3,7 +3,7 @@
 To use:
 
 ```sh  
-npm install --save-dev eslint@3 eslint-plugin-dependencies@2 @scoop/eslint-config-scoop@latest
+npm install --save-dev eslint@4 eslint-plugin-dependencies@2 @scoop/eslint-config-scoop@latest
 ```
 
 Then, add an `.eslintrc.json` file with the following:
