@@ -2,6 +2,10 @@
   "name": "@scoop/eslint-config-scoop",
   "version": "3.1.0",
   "description": "Scoop's custom eslint configuration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TakeScoop/eslint-config-scoop.git"
+  },
   "main": "index.js",
   "scripts": {
     "//": "This ensures we're not using any old rules, mostly, when upgrading eslint devDependency",
