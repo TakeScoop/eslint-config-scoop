@@ -8,7 +8,8 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "plugins": [
-        "dependencies"
+        "dependencies",
+        "implicit-dependencies"
     ],
     "rules": {
         "dependencies/case-sensitive": 2,
@@ -47,6 +48,14 @@ module.exports = {
         "dot-notation": 2,
         "eol-last": 2,
         "eqeqeq": 2,
+        "implicit-dependencies/no-implicit": [
+            "error",
+            {
+                "peer": true,
+                "dev": true,
+                "optional": true
+            }
+        ],
         "indent": [
             2,
             4,
