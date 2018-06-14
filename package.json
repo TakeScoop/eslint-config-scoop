@@ -15,7 +15,8 @@
     "license": "MIT",
     "devDependencies": {
         "eslint": "^4.9.0",
-        "eslint-plugin-dependencies": "^2.2.0"
+        "eslint-plugin-dependencies": "^2.2.0",
+        "eslint-plugin-implicit-dependencies": "^1.0.4"
     },
     "peerDependencies": {
         "eslint": "^4.9.0",
