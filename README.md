@@ -1,5 +1,7 @@
 # Scoop's eslint configuration
 
+**Maintainer(s):** [@hulbert](https://github.com/hulbert)
+
 To use:
 
 ```sh  
