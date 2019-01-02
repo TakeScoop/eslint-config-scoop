@@ -90,6 +90,14 @@ module.exports = {
         "no-implicit-globals": 2,
         "no-lonely-if": 2,
         "no-multi-spaces": 2,
+        "no-multiple-empty-lines": [
+            2, 
+            {
+                "max": 1,
+                "maxEOF": 0,
+                "maxBOF": 0
+            }
+        ],
         "no-multi-str": 2,
         "no-new-object": 2,
         "no-restricted-globals": [
