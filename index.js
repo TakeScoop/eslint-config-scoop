@@ -130,6 +130,7 @@ module.exports = {
             "nofunc"
         ],
         "no-useless-return": 2,
+        "no-var": 2,
         "object-curly-spacing": [
             2,
             "always",
@@ -142,6 +143,7 @@ module.exports = {
             "never"
         ],
         "padded-blocks": 0,
+        "prefer-const": 2,
         "quotes": [
             2,
             "single",

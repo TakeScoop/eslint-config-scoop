@@ -9,5 +9,5 @@ console.log(arr.map(function(n) {
 parseInt(5, 10)
 
 // not really safe but eslint doesn't support catching this
-let fun = parseInt
+const fun = parseInt
 console.log(arr.map(fun))
