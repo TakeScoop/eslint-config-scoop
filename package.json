@@ -2,6 +2,9 @@
     "name": "@scoop/eslint-config-scoop",
     "version": "4.0.0",
     "description": "Scoop's custom eslint configuration",
+    "engines" : { 
+        "node" : ">=6.0.0" 
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/TakeScoop/eslint-config-scoop.git"
