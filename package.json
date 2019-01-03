@@ -1,26 +1,26 @@
 {
-  "name": "@scoop/eslint-config-scoop",
-  "version": "4.0.0",
-  "description": "Scoop's custom eslint configuration",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TakeScoop/eslint-config-scoop.git"
-  },
-  "main": "index.js",
-  "scripts": {
-    "//": "This ensures we're not using any old rules, mostly, when upgrading eslint devDependency",
-    "test": "test/run"
-  },
-  "author": "Scoop Technologies Inc",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^5.11.1",
-    "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-implicit-dependencies": "^1.0.4"
-  },
-  "peerDependencies": {
-    "eslint": "^5.11.1",
-    "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-implicit-dependencies": "^1.0.4"
-  }
+    "name": "@scoop/eslint-config-scoop",
+    "version": "4.0.0",
+    "description": "Scoop's custom eslint configuration",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TakeScoop/eslint-config-scoop.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "//": "This ensures we're not using any old rules, mostly, when upgrading eslint devDependency",
+        "test": "test/run"
+    },
+    "author": "Scoop Technologies Inc",
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^5.11.1",
+        "eslint-plugin-dependencies": "^2.4.0",
+        "eslint-plugin-implicit-dependencies": "^1.0.4"
+    },
+    "peerDependencies": {
+        "eslint": "^5.11.1",
+        "eslint-plugin-dependencies": "^2.4.0",
+        "eslint-plugin-implicit-dependencies": "^1.0.4"
+    }
 }
