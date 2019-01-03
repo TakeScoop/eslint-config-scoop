@@ -49,7 +49,7 @@ module.exports = {
         "eol-last": 2,
         "eqeqeq": 2,
         "implicit-dependencies/no-implicit": [
-            "error",
+            2,
             {
                 "peer": true,
                 "dev": true,
@@ -105,7 +105,7 @@ module.exports = {
             "Promise"
         ],
         "no-restricted-syntax": [
-            "error",
+            2,
             {
                 "selector": "CallExpression[callee.name!='parseInt'] > Identifier[name='parseInt']",
                 "message": "Call parseInt directly to guarantee radix param is not incorrectly provided"
