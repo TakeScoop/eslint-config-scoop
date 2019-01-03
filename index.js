@@ -143,6 +143,11 @@ module.exports = {
             "never"
         ],
         "padded-blocks": 0,
+        "padding-line-between-statements": [
+            2,
+            { "blankLine": "always", "prev": "directive", "next": "*" },
+            { "blankLine": "any", "prev": "directive", next: "directive" }
+        ],
         "prefer-const": 2,
         "quotes": [
             2,
