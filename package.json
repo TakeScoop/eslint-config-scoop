@@ -17,7 +17,7 @@
     "author": "Scoop Technologies Inc",
     "license": "MIT",
     "devDependencies": {
-        "code": "^5.2.4",
+        "code": "^4.1.0",
         "eslint": "^5.11.1",
         "eslint-plugin-dependencies": "^2.4.0",
         "eslint-plugin-implicit-dependencies": "^1.0.4",
