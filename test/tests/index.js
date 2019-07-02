@@ -16,6 +16,19 @@ describe('testing eslint configuration', function() {
     
     describe('failure cases', function() {
         
+        /*
+         * Each item should be a file in ../fixtures/fails directory.
+         * `rulename` can be a string or array, where it's the acceptable rule
+         * that the corresponding lines should violate.
+         * 
+         * `line` can be a positive integer or an array, corresponding to the line(s)
+         * that should violate the given rule(s).
+         *  
+         * This is premised on the one failure type per file, but we have an edge case
+         * where the failure mode changes depending on OS so support 
+         * multiple `rulename` values as an implicit OR.
+         * 
+         */
         const failureCases = [
             {
                 filename: 'indentMemberExpression.js',
@@ -29,7 +42,7 @@ describe('testing eslint configuration', function() {
             },
             {
                 filename: 'requireCase.js',
-                rulename: 'dependencies/case-sensitive',
+                rulename: ['dependencies/case-sensitive', 'dependencies/no-unresolved'],
                 line: 6
             },
             {
@@ -77,23 +90,21 @@ describe('testing eslint configuration', function() {
         })
 
         failureCases.forEach(function(test) {
-            it(`should fail ${test.filename} for violating ${test.rulename}`, function(done) {
+            it(`should fail ${test.filename} for violating ${castArray(test.rulename).join(' or ')}`, function(done) {
                 const filepath = path.join(fixturesDirectory, '/fails', test.filename)
                 const report = engine.executeOnFiles([filepath])
             
                 expect(report.errorCount).to.be.at.least(1)
             
-                let lines = test.line
-                if (!Array.isArray(test.line)) {
-                    lines = [test.line]
-                }
-            
+                const linesWithFailures = castArray(test.line)
+                const rulesThisCanViolate = castArray(test.rulename)
+                
                 expect(report.results).to.be.length(1)
-                expect(report.results[0].messages).to.be.length(lines.length)
+                expect(report.results[0].messages).to.be.length(linesWithFailures.length)
             
                 report.results[0].messages.forEach(function(message) {
-                    expect(message.ruleId).to.equal(test.rulename)
-                    expect(lines, 'Defined line numbers should include error line').to.include(message.line)
+                    expect(rulesThisCanViolate).to.include(message.ruleId)
+                    expect(linesWithFailures, 'Defined line numbers should include error line').to.include(message.line)
                 })
             
                 done()
@@ -123,3 +134,11 @@ describe('testing eslint configuration', function() {
         })
     })
 })
+
+function castArray(val) {
+    if (Array.isArray(val)) {
+        return val
+    }
+    
+    return [val]
+}
