@@ -61,6 +61,11 @@ describe('testing eslint configuration', function() {
                 line: 3
             },
             {
+                filename: 'useStrictUnpadded.js',
+                rulename: 'padding-line-between-statements',
+                line: 2
+            },
+            {
                 filename: 'usingVar.js',
                 rulename: 'no-var',
                 line: 3
