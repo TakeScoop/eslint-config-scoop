@@ -103,10 +103,6 @@ module.exports = {
         ],
         "no-multi-str": 2,
         "no-new-object": 2,
-        "no-restricted-globals": [
-            2,
-            "Promise"
-        ],
         "no-restricted-syntax": [
             2,
             {
