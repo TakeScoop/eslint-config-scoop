@@ -36,6 +36,11 @@ describe('testing eslint configuration', function() {
                 line: [11, 12, 13]
             },
             {
+                filename: 'noSpaceAfterAsyncFatArrow.js',
+                rulename: 'space-before-function-paren',
+                line: 3
+            },
+            {
                 filename: 'parseIntWithMap.js',
                 rulename: 'no-restricted-syntax',
                 line: 5
@@ -53,6 +58,11 @@ describe('testing eslint configuration', function() {
             {
                 filename: 'shouldPreferConst.js',
                 rulename: 'prefer-const',
+                line: 3
+            },
+            {
+                filename: 'tooManySpacesAfterAsync.js',
+                rulename: 'no-multi-spaces',
                 line: 3
             },
             {
@@ -104,7 +114,7 @@ describe('testing eslint configuration', function() {
                 const filepath = path.join(fixturesDirectory, '/fails', test.filename)
                 const report = engine.executeOnFiles([filepath])
             
-                expect(report.errorCount).to.be.at.least(1)
+                expect(report.errorCount, 'ESLint error count').to.be.at.least(1)
             
                 const linesWithFailures = castArray(test.line)
                 const rulesThisCanViolate = castArray(test.rulename)
