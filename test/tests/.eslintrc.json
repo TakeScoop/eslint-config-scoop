@@ -1,0 +1,14 @@
+{
+    "globals": {
+        "describe": true,
+        "before": true,
+        "after": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "it": true,
+        "expect": true
+    },
+    "rules": {
+        "no-console": 2
+    }
+}
