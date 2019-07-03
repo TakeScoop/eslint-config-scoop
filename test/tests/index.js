@@ -47,7 +47,7 @@ describe('testing eslint configuration', function() {
             },
             {
                 filename: 'sameLineIf.js',
-                rulename: 'unknown',
+                rulename: 'curly',
                 line: 9
             },
             {

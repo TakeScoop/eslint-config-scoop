@@ -43,7 +43,7 @@ module.exports = {
         ],
         "curly": [
             2,
-            "multi-line"
+            "all"
         ],
         "dot-notation": 2,
         "eol-last": 2,
