@@ -31,6 +31,11 @@ describe('testing eslint configuration', function() {
          */
         const failureCases = [
             {
+                filename: 'arraySpacing.js',
+                rulename: 'unknown',
+                line: 3
+            },
+            {
                 filename: 'indentMemberExpression.js',
                 rulename: 'indent',
                 line: [11, 12, 13]
