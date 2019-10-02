@@ -7,6 +7,9 @@ module.exports = {
         "node": true
     },
     "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
     "plugins": [
         "dependencies",
         "implicit-dependencies"
@@ -163,7 +166,11 @@ module.exports = {
         "space-before-blocks": 2,
         "space-before-function-paren": [
             2,
-            "never"
+            {
+                "anonymous": "never",
+                "named": "never",
+                "asyncArrow": "always"
+            }
         ],
         "space-in-parens": [
             2,
