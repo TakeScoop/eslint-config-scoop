@@ -51,6 +51,10 @@ module.exports = {
         "dot-notation": 2,
         "eol-last": 2,
         "eqeqeq": 2,
+        "implicit-arrow-linebreak": [
+            2,
+            "beside"
+        ],
         "implicit-dependencies/no-implicit": [
             2,
             {
