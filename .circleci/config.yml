@@ -2,6 +2,10 @@ version: 2
 jobs:
   build:
     docker:
+      # Node.js version should be the oldest LTS release
+      # that is still in maintenance in order to
+      # stay compatible with as many apps as possible that
+      # are using LTS releases appropriately.
       - image: circleci/node:8.16.0
     steps:
       - checkout
