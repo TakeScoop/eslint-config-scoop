@@ -115,6 +115,7 @@ module.exports = {
             2,
             "always"
         ],
+        "no-sequences": 2,
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
         "no-unsafe-negation": 2,
