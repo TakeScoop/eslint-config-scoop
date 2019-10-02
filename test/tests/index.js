@@ -46,6 +46,11 @@ describe('testing eslint configuration', function() {
                 line: 6
             },
             {
+                filename: 'sameLineIf.js',
+                rulename: 'curly',
+                line: 9
+            },
+            {
                 filename: 'shouldPreferConst.js',
                 rulename: 'prefer-const',
                 line: 3
