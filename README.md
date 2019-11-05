@@ -17,3 +17,7 @@ Then, add an `.eslintrc.json` file with the following:
 ```
 
 Then, try running like `$(npm bin)/eslint .`
+
+## Publishing
+
+This package is a public package that is published directly with npm: https://docs.npmjs.com/cli/publish. Note you must have the proper write permissions to publish this package. 
