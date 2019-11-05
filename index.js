@@ -150,7 +150,8 @@ module.exports = {
         "padding-line-between-statements": [
             2,
             { "blankLine": "always", "prev": "directive", "next": "*" },
-            { "blankLine": "any", "prev": "directive", next: "directive" }
+            { "blankLine": "any", "prev": "directive", "next": "directive" },
+            { "blankLine": "always", "prev": "*", "next": "return" }
         ],
         "prefer-const": 2,
         "quotes": [
