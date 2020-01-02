@@ -96,6 +96,7 @@ module.exports = {
         ],
         "no-implicit-globals": 2,
         "no-lonely-if": 2,
+        "no-multi-assign": 2,
         "no-multi-spaces": 2,
         "no-multiple-empty-lines": [
             2, 
