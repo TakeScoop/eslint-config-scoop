@@ -51,11 +51,6 @@ describe('testing eslint configuration', function() {
                 line: 5
             },
             {
-                filename: 'requireCase.js',
-                rulename: ['import/no-unresolved'],
-                line: 6
-            },
-            {
                 filename: 'sameLineIf.js',
                 rulename: 'curly',
                 line: 9
