@@ -6,7 +6,7 @@ jobs:
       # that is still in maintenance in order to
       # stay compatible with as many apps as possible that
       # are using LTS releases appropriately.
-      - image: circleci/node:8.16.0
+      - image: circleci/node:8.17.0
     steps:
       - checkout
       - run: npm install
