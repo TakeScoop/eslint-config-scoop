@@ -52,7 +52,7 @@ describe('testing eslint configuration', function() {
             },
             {
                 filename: 'requireCase.js',
-                rulename: ['dependencies/case-sensitive', 'dependencies/no-unresolved'],
+                rulename: ['import/no-unresolved'],
                 line: 6
             },
             {

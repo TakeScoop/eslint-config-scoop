@@ -11,14 +11,12 @@ module.exports = {
         "ecmaVersion": 2018
     },
     "plugins": [
-        "dependencies",
+        "import",
         "implicit-dependencies"
     ],
     "rules": {
-        "dependencies/case-sensitive": 2,
-        "dependencies/no-cycles": 2,
-        "dependencies/no-unresolved": 2,
-        "dependencies/require-json-ext": 2,
+        "import/no-cycle": 2,
+        "import/no-unresolved": 2,
         "block-scoped-var": 2,
         "brace-style": [
             2,
