@@ -1,6 +1,4 @@
-# Scoop's eslint configuration
-
-**Maintainer(s):** [@hulbert](https://github.com/hulbert)
+# Scoop ESLint Configuration
 
 To use:
 
@@ -16,7 +14,7 @@ Then, add an `.eslintrc.json` file with the following:
 }
 ```
 
-Then, try running like `$(npm bin)/eslint .`
+Then, try running like `npx eslint .`
 
 ## Publishing
 
