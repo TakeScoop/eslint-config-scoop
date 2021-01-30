@@ -135,6 +135,7 @@ module.exports = {
         ],
         "no-useless-return": 2,
         "no-var": 2,
+        "object-shorthand": ["error", "properties"],
         "object-curly-spacing": [
             2,
             "always",
