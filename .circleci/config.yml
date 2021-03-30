@@ -5,6 +5,17 @@ orbs:
   node: circleci/node@4.2.1
 
 jobs:
+  test:
+    parameters:
+      run-command:
+        type: string
+        default: test
+    executor: node/default
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run << parameters.run-command >>
+  
   publish:
     executor: node/default
     steps:
@@ -18,11 +29,11 @@ workflows:
   version: 2
   default:
     jobs:
-      - node/test:
+      - test:
           filters:
              tags:
                only: /^v.*/
-      - node/test:
+      - test:
           name: lint
           run-command: lint
           filters:
