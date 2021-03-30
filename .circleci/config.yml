@@ -11,8 +11,7 @@ jobs:
       - checkout
       - artifactory/install
       - artifactory/configure
-      - artifactory/npm-auth:
-          scope: scoop
+      - artifactory/npm-auth
       - run: npm publish
 
 workflows:
@@ -34,8 +33,6 @@ workflows:
             - node/test
             - lint
           context: artifactory
-          setup:
-            - artifactory/npm-auth
           filters:
             tags:
               only: /^v.*/
