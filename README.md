@@ -18,4 +18,9 @@ Then, try running like `npx eslint .`
 
 ## Publishing
 
-This package is a public package that is published directly with npm: https://docs.npmjs.com/cli/publish. Note you must have the proper write permissions to publish this package. 
+```sh
+npm version $inc
+git push --follow-tags
+```
+
+CircleCI will upload this package to Scoop's private Artifactory-based npm repository. This package is no longer published to https://www.npmjs.com. 
