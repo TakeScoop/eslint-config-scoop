@@ -41,7 +41,7 @@ workflows:
                only: /^v.*/
       - publish:
           requires:
-            - node/test
+            - test
             - lint
           context: artifactory
           filters:
