@@ -1,10 +1,51 @@
-version: 2
+version: 2.1
+
+orbs:
+  artifactory: takescoop/artifactory@1
+  node: circleci/node@4.2.1
+
 jobs:
-  build:
-    docker:
-      - image: circleci/node:12
+  test:
+    parameters:
+      run-command:
+        type: string
+        default: test
+    executor: node/default
     steps:
       - checkout
       - run: npm install
-      - run: npm run lint
-      - run: npm test
+      - run: npm run << parameters.run-command >>
+  
+  publish:
+    executor: node/default
+    steps:
+      - checkout
+      - artifactory/install
+      - artifactory/configure
+      - artifactory/npm-auth
+      - run: npm publish
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - test:
+          filters:
+             tags:
+               only: /^v.*/
+      - test:
+          name: lint
+          run-command: lint
+          filters:
+             tags:
+               only: /^v.*/
+      - publish:
+          requires:
+            - test
+            - lint
+          context: artifactory
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
