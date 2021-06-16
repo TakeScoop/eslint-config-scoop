@@ -17,6 +17,33 @@ module.exports = {
     "rules": {
         "import/no-cycle": 2,
         "import/no-unresolved": 2,
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    [
+                        "internal",
+                        "index",
+                        "sibling",
+                        "parent",
+                        "object"
+                    ]
+                ],
+                "pathGroupsExcludedImportTypes": [
+                    "builtin"
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "@scoop/**",
+                        "group": "external",
+                        "position": "after"
+                    }
+                ],
+                "newlines-between": "always"
+            }
+        ],
         "block-scoped-var": 2,
         "brace-style": [
             2,
