@@ -22,7 +22,8 @@ jobs:
       - checkout
       - artifactory/install
       - artifactory/configure
-      - artifactory/npm-auth
+      - artifactory/npm-auth:
+          scope: scoop
       - run: npm publish
 
 workflows:
