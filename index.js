@@ -39,6 +39,11 @@ module.exports = {
                         "pattern": "@scoop/**",
                         "group": "external",
                         "position": "after"
+                    },
+                    {
+                        "pattern": ".*/config",
+                        "group": "builtin",
+                        "position": "before"
                     }
                 ],
                 "newlines-between": "always"
@@ -132,6 +137,7 @@ module.exports = {
         ],
         "no-multi-str": 2,
         "no-new-object": 2,
+        "no-prototype-builtins": 0,
         "no-restricted-syntax": [
             2,
             {
