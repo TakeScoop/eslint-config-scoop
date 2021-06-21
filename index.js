@@ -26,25 +26,13 @@ module.exports = {
                     [
                         "internal",
                         "index",
-                        "sibling",
                         "parent",
+                        "sibling",
                         "object"
                     ]
                 ],
                 "pathGroupsExcludedImportTypes": [
                     "builtin"
-                ],
-                "pathGroups": [
-                    {
-                        "pattern": "@scoop/**",
-                        "group": "external",
-                        "position": "after"
-                    },
-                    {
-                        "pattern": ".*/config",
-                        "group": "builtin",
-                        "position": "before"
-                    }
                 ],
                 "newlines-between": "always"
             }
