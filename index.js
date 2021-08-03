@@ -69,24 +69,12 @@ module.exports = {
         "dot-notation": 2,
         "eol-last": 2,
         "eqeqeq": 2,
-        "implicit-arrow-linebreak": [
-            2,
-            "beside"
-        ],
         "implicit-dependencies/no-implicit": [
             2,
             {
                 "peer": true,
                 "dev": true,
                 "optional": true
-            }
-        ],
-        "indent": [
-            2,
-            4,
-            {
-                "MemberExpression": 0,
-                "SwitchCase": 1
             }
         ],
         "key-spacing": 2,
@@ -155,13 +143,6 @@ module.exports = {
         "no-useless-return": 2,
         "no-var": 2,
         "object-shorthand": ["error", "properties"],
-        "object-curly-spacing": [
-            2,
-            "always",
-            {
-                "objectsInObjects": false
-            }
-        ],
         "one-var": [
             2,
             "never"
@@ -185,14 +166,6 @@ module.exports = {
         ],
         "semi-spacing": 2,
         "space-before-blocks": 2,
-        "space-before-function-paren": [
-            2,
-            {
-                "anonymous": "never",
-                "named": "never",
-                "asyncArrow": "always"
-            }
-        ],
         "space-in-parens": [
             2,
             "never"
