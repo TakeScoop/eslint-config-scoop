@@ -19,7 +19,7 @@ Then, try running like `npx eslint .`
 # Philosophy
 
 Originally, Scoop's eslint configuration was designed to support both Scoop's style guidelines as well as catch syntactical errors. After some evolution, [Prettier](https://prettier.io/) was adopted by Scoop's Frontend
-team, and then eventually expanded to our backend code as well. Our goal is to have our eslint catch all of our syntactical issues, while letting Prettier decide our formatting decisions. No eslint style rule should ever
+team, and then eventually expanded to our backend code as well. Our goal is to have our eslint catch all of our code-quality issues (`no-unused-vars`), while letting Prettier decide our formatting decisions (`max-len`). No eslint style rule should ever
 contradict a Prettier rule, but style rules may be added only if it complements Prettier (ex: newline before return), but these should be used extremely sparingly.
 
 For more on our style philosophy, please see [Prettier's option philosophy](https://prettier.io/docs/en/option-philosophy.html)
