@@ -31,21 +31,6 @@ describe('testing eslint configuration', function() {
          */
         const failureCases = [
             {
-                filename: 'arrowReturnNewLine.js',
-                rulename: 'implicit-arrow-linebreak',
-                line: 9
-            },
-            {
-                filename: 'indentMemberExpression.js',
-                rulename: 'indent',
-                line: [11, 12, 13]
-            },
-            {
-                filename: 'noSpaceAfterAsyncFatArrow.js',
-                rulename: 'space-before-function-paren',
-                line: 3
-            },
-            {
                 filename: 'parseIntWithMap.js',
                 rulename: 'no-restricted-syntax',
                 line: 5
