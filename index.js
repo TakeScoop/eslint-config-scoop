@@ -100,6 +100,7 @@ module.exports = {
             2,
             "functions"
         ],
+        "no-extra-semi": 0,
         "no-implicit-globals": 2,
         "no-lonely-if": 2,
         "no-multi-spaces": 2,
