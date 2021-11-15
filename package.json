@@ -18,14 +18,14 @@
   "license": "MIT",
   "devDependencies": {
     "code": "^5.0.0",
-    "eslint": "^7.18.0",
+    "eslint": "^8.0.0",
     "mocha": "^9.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.18.0"
+    "eslint": "^8.0.0"
   },
   "dependencies": {
     "eslint-plugin-implicit-dependencies": "^1.0.4",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.25.3"
   }
 }
