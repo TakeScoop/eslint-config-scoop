@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "eslint-plugin-implicit-dependencies": "^1.0.4",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.25.3"
   }
 }
