@@ -1,6 +1,6 @@
 {
   "name": "@scoop/eslint-config-scoop",
-  "version": "9.1.0",
+  "version": "10.0.0",
   "description": "Scoop's custom eslint configuration",
   "engines": {
     "node": ">=12"
