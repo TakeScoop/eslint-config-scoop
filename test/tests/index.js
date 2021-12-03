@@ -75,6 +75,11 @@ describe('eslint configuration', function() {
                 rulename: 'valid-typeof',
                 line: 5
             },
+            {
+                filename: 'awaitThenable.ts',
+                rulename: '@typescript-eslint/await-thenable',
+                line: 2
+            },
         ]
         
         it('should have a codified failure case for every fail fixture', async function() {
