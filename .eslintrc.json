@@ -1,0 +1,23 @@
+{
+    "extends": [
+        "./index.js"
+    ],
+    "overrides": [
+        {
+            "files": ["test/**/*"],
+            "globals": {
+                "describe": true,
+                "before": true,
+                "after": true,
+                "beforeEach": true,
+                "afterEach": true,
+                "it": true,
+                "expect": true,
+                "rootRequire": true
+            },
+            "rules": {
+                "no-console": 2
+            }
+        }
+    ]
+}
