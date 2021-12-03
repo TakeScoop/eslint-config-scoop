@@ -78,7 +78,8 @@ module.exports = {
             {
                 "capIsNewExceptions": [
                     "Sendgrid",
-                    "Bookshelf"
+                    "Bookshelf",
+                    "Highland"
                 ],
                 "newIsCapExceptions": [
                     "self"
