@@ -1,5 +1,5 @@
 'use strict'
 
-const Code = require('code')
+const Code = require('@hapi/code')
 
 global.expect = Code.expect

@@ -3,7 +3,7 @@
 const { promises: fs, readdirSync } = require('fs')
 const path = require('path')
 
-const Code = require('code')
+const Code = require('@hapi/code')
 const { ESLint } = require('eslint')
 
 const eslint = new ESLint({
