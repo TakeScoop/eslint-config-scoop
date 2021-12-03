@@ -2,9 +2,10 @@
     "extends": [
         "./index.js"
     ],
+    "ignorePatterns": "dist/**",
     "overrides": [
         {
-            "files": ["test/**/*"],
+            "files": ["test/tests/**/*"],
             "globals": {
                 "describe": true,
                 "before": true,

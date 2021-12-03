@@ -10,6 +10,7 @@
     "url": "https://github.com/TakeScoop/eslint-config-scoop.git"
   },
   "main": "index.js",
+  "files": ["index.js"],
   "scripts": {
     "lint": "eslint -c index.js index.js test/*.js test/tests",
     "test": "NODE_ENV=test mocha --recursive --require test/injectGlobals.js --exit test/tests"
