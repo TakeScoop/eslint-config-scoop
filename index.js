@@ -1,19 +1,32 @@
-'use strict'
-
 /* eslint-disable */
 module.exports = {
     "env": {
         "es6": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 2018
+        "ecmaVersion": 2018,
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "import",
         "implicit-dependencies"
     ],
+    "settings": {
+        "import/extensions": [".js", ".ts"],
+        
+        // https://github.com/import-js/eslint-plugin-import/issues/1485#issuecomment-535351922
+        "import/resolver": {
+            "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+        }
+    },
     "rules": {
         "import/no-cycle": 2,
         "import/no-unresolved": 2,
@@ -38,16 +51,16 @@ module.exports = {
             }
         ],
         "block-scoped-var": 2,
-        "brace-style": [
+        "@typescript-eslint/brace-style": [
             2,
             "1tbs"
         ],
         "camelcase": 2,
-        "comma-dangle": [
+        "@typescript-eslint/comma-dangle": [
             2,
             "only-multiline"
         ],
-        "comma-spacing": [
+        "@typescript-eslint/comma-spacing": [
             2,
             {
                 "before": false,
@@ -66,7 +79,7 @@ module.exports = {
             2,
             "all"
         ],
-        "dot-notation": 2,
+        "@typescript-eslint/dot-notation": 2,
         "eol-last": 2,
         "eqeqeq": 2,
         "implicit-dependencies/no-implicit": [
@@ -78,7 +91,7 @@ module.exports = {
             }
         ],
         "key-spacing": 2,
-        "keyword-spacing": 2,
+        "@typescript-eslint/keyword-spacing": 2,
         "linebreak-style": 2,
         "new-cap": [
             2,
@@ -96,7 +109,7 @@ module.exports = {
         "no-console": 0,
         "no-else-return": 2,
         "no-eq-null": 2,
-        "no-extra-parens": [
+        "@typescript-eslint/no-extra-parens": [
             2,
             "functions"
         ],
@@ -130,14 +143,14 @@ module.exports = {
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
         "no-unsafe-negation": 2,
-        "no-unused-vars": [
+        "@typescript-eslint/no-unused-vars": [
             2,
             {
                 "args": "none",
                 "vars": "all"
             }
         ],
-        "no-use-before-define": [
+        "@typescript-eslint/no-use-before-define": [
             2,
             "nofunc"
         ],
@@ -149,19 +162,19 @@ module.exports = {
             "never"
         ],
         "padded-blocks": 0,
-        "padding-line-between-statements": [
+        "@typescript-eslint/padding-line-between-statements": [
             2,
             { "blankLine": "always", "prev": "directive", "next": "*" },
             { "blankLine": "any", "prev": "directive", "next": "directive" },
             { "blankLine": "always", "prev": "*", "next": "return" }
         ],
         "prefer-const": 2,
-        "quotes": [
+        "@typescript-eslint/quotes": [
             2,
             "single",
             "avoid-escape"
         ],
-        "semi": [
+        "@typescript-eslint/semi": [
             2,
             "never"
         ],
@@ -171,7 +184,7 @@ module.exports = {
             2,
             "never"
         ],
-        "space-infix-ops": 2,
+        "@typescript-eslint/space-infix-ops": 2,
         "space-unary-ops": [
             2, {
             "words": true,
@@ -193,6 +206,30 @@ module.exports = {
         "wrap-iife": [
             2,
             "inside"
+        ],
+        
+        // Disable some extremely restrictive @typescript-eslint/recommended-requiring-type-checking rules
+        "@typescript-eslint/no-empty-function": "off", // knex migrations often have empty functions
+        "@typescript-eslint/no-explicit-any": "off", // far too many required cases right now to enable, even as a warning
+        "@typescript-eslint/no-floating-promises": "off", // hates knex QueryBuilders because they expose a `.then()` method
+        "@typescript-eslint/no-var-requires": "off", // would disallow requires within functions. But, we need this (unfortunately) because of circular dependencies.
+        "@typescript-eslint/no-unsafe-argument": "off", // too much `any`
+        "@typescript-eslint/no-unsafe-assignment": "off", // too much `any`
+        "@typescript-eslint/no-unsafe-call": "off", // too much `any`
+        "@typescript-eslint/no-unsafe-member-access": "off", // too much `any`
+        "@typescript-eslint/no-unsafe-return": "off", // too much `any`
+        "@typescript-eslint/restrict-template-expressions": "off", // too much `any`
+        "@typescript-eslint/require-await": "off", // not already enabled
+
+        // Override existing rules with slightly more forgiving behavior
+        "@typescript-eslint/ban-ts-comment": [
+            "error",
+            {
+                "ts-expect-error": "allow-with-description",
+                "ts-ignore": "allow-with-description",
+                "ts-nocheck": "allow-with-description",
+                "ts-check": false
+            }
         ]
     }
 }
