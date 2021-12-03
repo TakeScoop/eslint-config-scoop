@@ -80,6 +80,11 @@ describe('eslint configuration', function() {
                 rulename: '@typescript-eslint/await-thenable',
                 line: 2
             },
+            {
+                filename: 'banTsComment.ts',
+                rulename: '@typescript-eslint/ban-ts-comment',
+                line: 1
+            },
         ]
         
         it('should have a codified failure case for every fail fixture', async function() {
@@ -117,7 +122,7 @@ describe('eslint configuration', function() {
         const filenames = readdirSync(path.join(fixturesDirectory, '/passes'))
 
         filenames.forEach(function(filename) {
-            const caseName = filename.replace(/\.js$/, '')
+            const caseName = filename.replace(/\.(js|ts)$/, '')
             
             it(`test case '${caseName}' should pass`, async function() {
                 const filepath = path.join(fixturesDirectory, '/passes', filename)
