@@ -287,18 +287,7 @@ module.exports = {
                 "@typescript-eslint/no-unsafe-member-access": "off", // too much `any`
                 "@typescript-eslint/no-unsafe-return": "off", // too much `any`
                 "@typescript-eslint/restrict-template-expressions": "off", // too much `any`
-                "@typescript-eslint/require-await": "off", // not already enabled
-        
-                // Override existing rules with slightly more forgiving behavior
-                "@typescript-eslint/ban-ts-comment": [
-                    "error",
-                    {
-                        "ts-expect-error": "allow-with-description",
-                        "ts-ignore": "allow-with-description",
-                        "ts-nocheck": "allow-with-description",
-                        "ts-check": false
-                    }
-                ]
+                "@typescript-eslint/require-await": "off" // not already enabled
             }
         }
     ]
