@@ -20,7 +20,7 @@
   "author": "Scoop Technologies Inc",
   "license": "MIT",
   "devDependencies": {
-    "@hapi/code": "^8.0.5",
+    "@hapi/code": "^9.0.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.11",
     "eslint": "^8.0.0",
