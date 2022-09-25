@@ -33,7 +33,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
-    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
     "eslint-plugin-implicit-dependencies": "^1.0.4",
     "eslint-plugin-import": "^2.25.3"
   }
