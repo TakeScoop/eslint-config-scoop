@@ -1,0 +1,4 @@
+_extends: .github
+repository:
+  name: eslint-config-scoop
+  private: false
